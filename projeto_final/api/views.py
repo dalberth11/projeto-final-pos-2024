@@ -27,3 +27,5 @@ class PhotoViewSet(viewsets.ModelViewSet):
     queryset = Photo.objects.all()
     serializer_class = PhotoSerializer
 
+def index(request):
+    return render(request, 'index.html')

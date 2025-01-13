@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from api.views import index  # Importando a view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),  # Incluindo as URLs da API
+    path('api/', include('api.urls')),  # URLs da API
+    path('', index, name='index'),  # Página inicial
+
 ]
