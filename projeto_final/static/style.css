@@ -1,0 +1,84 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Cor de fundo preta */
+    color: #32CD32; /* Cor das letras verde (verde limão) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura da tela inteira */
+}
+
+/* Estilo para o título principal */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os subtítulos */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #222; /* Fundo do formulário em um tom mais escuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para os campos de entrada de texto */
+input {
+    width: 300px; /* Largura do campo de entrada */
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #32CD32; /* Borda verde */
+    border-radius: 5px;
+    background-color: #333; /* Fundo escuro dos campos */
+    color: #32CD32; /* Cor verde para o texto */
+    font-size: 16px;
+}
+
+/* Estilo para o botão */
+button {
+    width: 320px;
+    padding: 10px;
+    background-color: #32CD32; /* Fundo verde do botão */
+    color: #000; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #228B22; /* Cor verde mais escura ao passar o mouse */
+}
+
+/* Estilo para a lista de usuários */
+#content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content div {
+    padding: 10px;
+    margin: 5px;
+    background-color: #333; /* Fundo escuro para as entradas de usuários */
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    color: #32CD32; /* Cor verde para o texto da lista */
+}
