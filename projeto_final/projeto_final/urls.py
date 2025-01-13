@@ -25,7 +25,7 @@ router = DefaultRouter()
 urlpatterns = [
     path('', home, name='home'),  # Rota para a página inicial
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),  # Inclui as rotas da API   
+     path('api/', include('api_app.urls')),
    
 
     
