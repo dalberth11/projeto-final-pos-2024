@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'api',
+    'rest_framework',  # Adiciona o Django REST Framework
+    'api',  # Sua app 'api'
     
 ]
 
