@@ -54,12 +54,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'projeto_final.urls'
 
+import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'templates',  # Diretório geral de templates
-        ],
+    os.path.join(BASE_DIR, 'api/templates'),  # Certifique-se de que o caminho está correto
+    ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,6 +72,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 
 WSGI_APPLICATION = 'projeto_final.wsgi.application'

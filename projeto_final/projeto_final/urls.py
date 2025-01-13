@@ -18,15 +18,19 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from api.views import home
+from api import views
 
 router = DefaultRouter()
 
 
 urlpatterns = [
-    path('', home, name='home'),  # Rota para a página inicial
+    path('', views.home, name='home'),  # Rota para a página inicial
     path('admin/', admin.site.urls),
-     path('api/', include('api.urls')),
-   
-
-    
+    path('api/', include('api.urls')),
+    path('usuarios/', views.listar_usuarios, name='listar_usuarios'),
+    path('usuarios/', views.listar_usuarios, name='listar_usuarios'),
+    path('api/users/', views.api_users, name='api_users'),  # Endpoint para manipulação de usuários
+    path('usuarios/editar/<int:id>/', views.editar_usuario, name='editar_usuario'),
+    path('usuarios/excluir/<int:id>/', views.excluir_usuario, name='excluir_usuario'),
+    path('criar/', views.criar_usuario, name='criar_usuario'),
 ]
