@@ -4,29 +4,29 @@ from .models import User, Post, Comment, Album, Photo, ToDo
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ['id', 'name', 'email'] 
 
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = '__all__'
+        fields = ['id', 'title', 'body']  
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = ['id', 'name', 'email', 'body'] 
 
 class AlbumSerializer(serializers.ModelSerializer):
     class Meta:
         model = Album
-        fields = '__all__'
+        fields = ['id', 'title', 'user'] 
 
 class PhotoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Photo
-        fields = '__all__'
+        fields = ['id', 'title', 'url', 'thumbnail_url']  
 
 class ToDoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ToDo
-        fields = '__all__'
+        fields = ['id', 'title', 'completed', 'user']  
